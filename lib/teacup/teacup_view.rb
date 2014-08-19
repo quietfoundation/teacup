@@ -39,17 +39,10 @@ module Teacup
     #
     # This will cause new styles to be applied from the stylesheet.
     #
-    # If you are using Pixate, it will also set the pixate `styleId` property.
-    #
     # @param Symbol  stylename
     def stylename=(new_stylename)
       @stylename = new_stylename
-      if respond_to?(:'setStyleId:')
-        setStyleId(new_stylename)
-      end
-      if respond_to?(:'setNuiClass:')
-        setNuiClass(new_stylename)
-      end
+
       restyle!
     end
 
