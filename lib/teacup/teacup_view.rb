@@ -26,7 +26,7 @@ module Teacup
 
     def teacup_next_responder=(layout)
       @_has_next_responder = true
-      @teacup_next_responder = WeakRef.new(self)
+      @teacup_next_responder = WeakRef.new(layout)
     end
 
     def teacup_next_responder
